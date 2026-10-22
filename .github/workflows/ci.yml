@@ -45,8 +45,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-          ${{ env.REGISTRY_GHCR }}/${{ github.repository }}
-          ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
+            ${{ env.REGISTRY_GHCR }}/${{ github.repository }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=latest
             type=sha,format=short
